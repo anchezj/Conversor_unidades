@@ -1,0 +1,94 @@
+
+body{
+  margin: 0px;
+  padding: 0px;
+}
+.mini-tools{
+  width: 400px;
+  height: 300px;
+  background-image: url(imagenes/fondo1.jpg) ;
+ te
+}
+.mini-too{
+  width: 400px;
+  height: 300px;
+  background-image: url(imagenes/fondo2.jpg) ;
+
+}
+.mini-tool{
+  width: 400px;
+  height: 300px;
+  background-image: url(imagenes/fondo4.jpg) ;
+ 
+}
+p#header {
+  text-align: center;
+  font-size: 4.5em;
+  color:orange;
+}
+input{
+  height: 25px;
+  text-align: center;
+}
+#input{
+  margin-left: 10px;
+}
+#ingrese{
+  margin-left: 10px;
+}
+#ingresa{
+  margin-left: 10px;
+}
+
+body{
+  background: #00FFFF;
+  background-image: url(imagenes/fondo.png) ;
+  
+}
+#inputType,#resultadoType{
+  width: 177.52px;
+  margin-left: 12.5px;
+  color: blue;
+}
+#resultadoType{
+  margin-left: 12.5px;
+}
+#ingreseType,#resultType{
+  width: 177.52px;
+  margin-left: 12.5px;
+  color: red;
+}
+#resultType{
+  margin-left: 12.5px;
+}
+#ingresaType,#solucionType{
+  width: 177.52px;
+  margin-left: 12.5px;
+  color: green;
+}
+#solucionType{
+  margin-left: 12.5px;
+}
+/** {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body{
+  background: #00FFFF;
+  background-image: url(imagenes/fondo.png) ;
+  
+}
+div#titulo{
+
+  width:100%;
+  margin-top:10px;
+}
+p#header {
+  text-align: center;
+  font-size: 4.5em;
+  color:orange;
+}*/

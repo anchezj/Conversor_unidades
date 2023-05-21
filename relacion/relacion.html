@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>sistema internacional</title>
+	<link rel="stylesheet" href="relacion.css">
+</head>
+<body>
+
+<center>
+	<div id="titulo">
+            <p id="header">relacion entre  sistemas ingles e internacional </p>
+            
+               
+      </div>
+<br><br><br>
+      <div class="mini-tools">
+      <h2>Longitud</h2>
+
+
+<input type="text" placeholder="input" id="input">
+<span>=</span>
+<input type="text" placeholder="Resultado" id="resultado">
+
+<select id="inputType">
+<option value="kilometro">Kilómetro (km)</option>
+<option value="metro">Metro (m)</option>
+<option value="centimetro">Centímetro (cm)</option>
+<option value="milimetro">Milímetro (mm)</option>
+<option value="milla">milla (m)</option>
+<option value="yarda">yarda (yd)</option>
+<option value="pie">pie (ft)</option>
+<option value="pulgada">pulgada(in)</option>
+</select>
+
+
+
+<select id="resultadoType">
+<option value="kilometro">Kilómetro (km)</option>
+<option value="metro">Metro (m)</option>
+<option value="centimetro">Centímetro (cm)</option>
+<option value="milimetro">Milímetro (mm)</option>
+<option value="milla">milla (m)</option>
+<option value="yarda">yarda (yd)</option>
+<option value="pie">pie (ft)</option>
+<option value="pulgada">pulgada(in)</option>
+</select>
+
+</div>
+<script type="text/javascript">
+   var input=document.getElementById('input');
+   var resultado=document.getElementById('resultado');
+   var inputType=document.getElementById('inputType');
+   var resultadoType=document.getElementById('resultadoType');
+   var inputTypeValue,resultadoTypeValue;
+
+//now add listener
+   input.addEventListener("keyup",myResultado);
+   inputType.addEventListener("change",myResultado);
+   resultadoType.addEventListener("change",myResultado);
+
+// taking initial value
+   inputTypeValue=inputType.value;
+   resultadoTypeValue=resultadoType.value;
+   function myResultado(){
+
+   inputTypeValue=inputType.value;
+   resultadoTypeValue=resultadoType.value;
+
+//now compare the input and resaultType value and add formula
+   if(inputTypeValue === "metro" && resultadoTypeValue==="kilometro"){
+   	resultado.value=Number(input.value) * 0.001;
+   }else if(inputTypeValue === "metro" && resultadoTypeValue==="centimetro"){
+   	resultado.value=Number(input.value) * 100 ;
+   }else if(inputTypeValue === "metro" && resultadoTypeValue==="milimetro"){
+   	resultado.value=Number(input.value) * 1000 ;
+   }else if(inputTypeValue === "metro" && resultadoTypeValue==="metro"){
+   	resultado.value = input.value
+   }
+
+
+   if(inputTypeValue === "kilometro" && resultadoTypeValue==="metro"){
+   	resultado.value=Number(input.value) * 1000;
+   }else if(inputTypeValue === "kilometro" && resultadoTypeValue==="centimetro"){
+   	resultado.value=Number(input.value) * 100000 ;
+   }else if(inputTypeValue === "kilometro" && resultadoTypeValue==="milimetro"){
+   	resultado.value=Number(input.value) * 1e+6 ;
+   }else if(inputTypeValue === "kilometro" && resultadoTypeValue==="kilometro"){
+   	resultado.value = input.value
+   }
+
+
+   if(inputTypeValue === "centimetro" && resultadoTypeValue==="kilometro"){
+   	resultado.value=Number(input.value) * 1e-5;
+   }else if(inputTypeValue === "centimetro" && resultadoTypeValue==="milimetro"){
+   	resultado.value=Number(input.value) * 10 ;
+   }else if(inputTypeValue === "centimetro" && resultadoTypeValue==="metro"){
+   	resultado.value=Number(input.value) * 0.01 ;
+   }else if(inputTypeValue === "centimetro" && resultadoTypeValue==="centimetro"){
+   	resultado.value = input.value
+   }
+
+
+   if(inputTypeValue === "milimetro" && resultadoTypeValue==="kilometro"){
+   	resultado.value=Number(input.value) * 1e-6;
+   }else if(inputTypeValue === "milimetro" && resultadoTypeValue==="centimetro"){
+   	resultado.value=Number(input.value) * 0.1 ;
+   }else if(inputTypeValue === "milimetro" && resultadoTypeValue==="metro"){
+   	resultado.value=Number(input.value) * 0.001 ;
+   }else if(inputTypeValue === "milimetro" && resultadoTypeValue==="milimetro"){
+   	resultado.value = input.value
+   }
+   //sistema ingles
+
+    if(inputTypeValue === "pulgada" && resultadoTypeValue==="milla"){
+      resultado.value=Number(input.value) * 1.3715e-5;
+   }else if(inputTypeValue === "pulgada" && resultadoTypeValue==="yarda"){
+      resultado.value=Number(input.value) * 0.0277778 ;
+   }else if(inputTypeValue === "pulgada" && resultadoTypeValue==="pie"){
+      resultado.value=Number(input.value) * 0.0833333 ;
+   }else if(inputTypeValue === "pulgada" && resultadoTypeValue==="pulgada"){
+      resultado.value = input.value
+   }
+
+
+   if(inputTypeValue === "milla" && resultadoTypeValue==="pulgada"){
+      resultado.value=Number(input.value) * 63360;
+   }else if(inputTypeValue === "milla" && resultadoTypeValue==="yarda"){
+      resultado.value=Number(input.value) * 1760 ;
+   }else if(inputTypeValue === "milla" && resultadoTypeValue==="pie"){
+      resultado.value=Number(input.value) * 5280 ;
+   }else if(inputTypeValue === "milla" && resultadoTypeValue==="milla"){
+      resultado.value = input.value
+   }
+
+
+   if(inputTypeValue === "yarda" && resultadoTypeValue==="milla"){
+      resultado.value=Number(input.value) * 0.000568182;
+   }else if(inputTypeValue === "yarda" && resultadoTypeValue==="pulgada"){
+      resultado.value=Number(input.value) * 36 ;
+   }else if(inputTypeValue === "yarda" && resultadoTypeValue==="pie"){
+      resultado.value=Number(input.value) * 3 ;
+   }else if(inputTypeValue === "yarda" && resultadoTypeValue==="yarda"){
+      resultado.value = input.value
+   }
+
+
+   if(inputTypeValue === "pie" && resultadoTypeValue==="milla"){
+      resultado.value=Number(input.value) * 0.000189394;
+   }else if(inputTypeValue === "pie" && resultadoTypeValue==="pulgada"){
+      resultado.value=Number(input.value) * 12 ;
+   }else if(inputTypeValue === "pie" && resultadoTypeValue==="yarda"){
+      resultado.value=Number(input.value) * 0.333333 ;
+   }else if(inputTypeValue === "pie" && resultadoTypeValue==="pie"){
+      resultado.value = input.value
+   }
+     
+   }
+     
+   
+</script>
+
+
+<br><br><br><br><br>
+ <div class="mini-too">
+      <h2>Masa</h2>
+
+<input type="text" placeholder="input" id="ingrese">
+<span>=</span>
+<input type="text" placeholder="Resultado" id="result">
+
+<select id="ingreseType">
+<option value="tonelada">Tonelada (t)</option>
+<option value="kilogramo">Kilogramo (kg)</option>
+<option value="gramo">Gramo (g)</option>
+<option value="miligramo">Miligramo (mg)</option>
+<option value="libra">libra (lb)</option>
+<option value="onza">onza(oz)</option>
+</select>
+
+
+
+
+<select id="resultType">
+<option value="tonelada">Tonelada (t)</option>
+<option value="kilogramo">Kilogramo (kg)</option>
+<option value="gramo">Gramo (g)</option>
+<option value="miligramo">Miligramo (mg)</option>
+<option value="libra">libra (lb)</option>
+<option value="onza">onza(oz)</option>
+</select>
+
+</div>
+<script type="text/javascript">
+   var ingrese=document.getElementById('ingrese');
+   var result=document.getElementById('result');
+   var ingreseType=document.getElementById('ingreseType');
+   var resultType=document.getElementById('resultType');
+   var ingreseTypeValue,resultTypeValue;
+
+//now add listener
+   ingrese.addEventListener("keyup",myResult);
+   ingreseType.addEventListener("change",myResult);
+   resultType.addEventListener("change",myResult);
+
+// taking initial value
+   ingreseTypeValue=ingreseType.value;
+   resultTypeValue=resultType.value;
+   function myResult(){
+
+   ingreseTypeValue=ingreseType.value;
+   resultTypeValue=resultType.value;
+
+//now compare the input and resaultType value and add formula
+   if(ingreseTypeValue === "tonelada" && resultTypeValue==="kilogramo"){
+      result.value=Number(ingrese.value) * 1000;
+   }else if(ingreseTypeValue === "tonelada" && resultTypeValue==="miligramo"){
+      result.value=Number(ingrese.value) * 1e+9;
+   }else if(ingreseTypeValue === "tonelada" && resultTypeValue==="onza"){
+      result.value=Number(ingrese.value) * 35274;
+   }else if(ingreseTypeValue === "tonelada" && resultTypeValue==="libra"){
+      result.value=Number(ingrese.value) * 2204.62;
+   }else if(ingreseTypeValue === "tonelada" && resultTypeValue==="gramo"){
+      result.value=Number(ingrese.value) * 1e+6 ;
+   }else if(ingreseTypeValue === "tonelada" && resultTypeValue==="tonelada"){
+      result.value = ingrese.value
+   }
+
+
+   if(ingreseTypeValue === "kilogramo" && resultTypeValue==="tonelada"){
+      result.value=Number(ingrese.value) * 0.001;
+   }else if(ingreseTypeValue === "kilogramo" && resultTypeValue==="miligramo"){
+      resultado.value=Number(ingrese.value) * 1e+6 ;
+   }else if(ingreseTypeValue === "kilogramo" && resultTypeValue==="gramo"){
+      result.value=Number(ingrese.value) * 1000 ;
+   }else if(ingreseTypeValue === "kilogramo" && resultTypeValue==="libra"){
+      result.value=Number(ingrese.value) * 2.20462 ;
+   }else if(ingreseTypeValue === "kilogramo" && resultTypeValue==="onza"){
+      result.value=Number(ingrese.value) * 35.274 ;
+   }else if(ingreseTypeValue === "kilogramo" && resultTypeValue==="kilogramo"){
+      result.value = ingrese.value
+   }
+
+  if(ingreseTypeValue === "gramo" && resultTypeValue==="kilogramo"){
+      result.value=Number(ingrese.value) * 0.001;
+   }else if(ingreseTypeValue === "gramo" && resultTypeValue==="miligramo"){
+      result.value=Number(ingrese.value) * 1000;
+   }else if(ingreseTypeValue === "gramo" && resultTypeValue==="libra"){
+      result.value=Number(ingrese.value) * 0.00220462;
+   }else if(ingreseTypeValue === "gramo" && resultTypeValue==="onza"){
+      result.value=Number(ingrese.value) * 0.035274;
+   }else if(ingreseTypeValue === "gramo" && resultTypeValue==="tonelada"){
+      result.value=Number(ingrese.value) * 1e-6 ;
+   }else if(ingreseTypeValue === "gramo" && resultTypeValue==="gramo"){
+      result.value = ingrese.value
+   }
+
+  if(ingreseTypeValue === "miligramo" && resultTypeValue==="kilogramo"){
+      result.value=Number(ingrese.value) * 1e-6;
+   }else if(ingreseTypeValue === "miligramo" && resultTypeValue==="tonelada"){
+      result.value=Number(ingrese.value) * 1e-9;
+   }else if(ingreseTypeValue === "miligramo" && resultTypeValue==="libra"){
+      result.value=Number(ingrese.value) * 2.2046e-6;
+   }else if(ingreseTypeValue === "miligramo" && resultTypeValue==="onza"){
+      result.value=Number(ingrese.value) * 3.5274e-5;
+   }else if(ingreseTypeValue === "miligramo" && resultTypeValue==="gramo"){
+      result.value=Number(ingrese.value) * 0.001 ;
+   }else if(ingreseTypeValue === "miligramo" && resultTypeValue==="miligramo"){
+      result.value = ingrese.value
+   }
+   //sistema ingles
+   if(ingreseTypeValue === "onza" && resultTypeValue==="kilogramo"){
+      result.value=Number(ingrese.value) * 0.0283495;
+   }else if(ingreseTypeValue === "onza" && resultTypeValue==="tonelada"){
+      result.value=Number(ingrese.value) * 2.835e-5;
+   }else if(ingreseTypeValue === "onza" && resultTypeValue==="libra"){
+      result.value=Number(ingrese.value) * 0.0625;
+   }else if(ingreseTypeValue === "onza" && resultTypeValue==="miligramo"){
+      result.value=Number(ingrese.value) * 28349.5;
+   }else if(ingreseTypeValue === "onza" && resultTypeValue==="gramo"){
+      result.value=Number(ingrese.value) * 28.3495 ;
+   }else if(ingreseTypeValue === "onza" && resultTypeValue==="onza"){
+      result.value = ingrese.value
+   }
+
+
+   if(ingreseTypeValue === "libra" && resultTypeValue==="kilogramo"){
+      result.value=Number(ingrese.value) * 0.453592;
+   }else if(ingreseTypeValue === "libra" && resultTypeValue==="tonelada"){
+      result.value=Number(ingrese.value) * 0.000453592;
+   }else if(ingreseTypeValue === "libra" && resultTypeValue==="onza"){
+      result.value=Number(ingrese.value) * 16;
+   }else if(ingreseTypeValue === "libra" && resultTypeValue==="miligramo"){
+      result.value=Number(ingrese.value) * 453592;
+   }else if(ingreseTypeValue === "libra" && resultTypeValue==="gramo"){
+      result.value=Number(ingrese.value) * 453.592 ;
+   }else if(ingreseTypeValue === "libra" && resultTypeValue==="libra"){
+      result.value = ingrese.value
+   }
+
+}
+  
+         
+   
+</script>
+
+
+<br><br><br><br><br>
+ <div class="mini-tool">
+      <h2>Presion</h2>
+<input type="text" placeholder="input" id="ingresa">
+<span>=</span>
+<input type="text" placeholder="Resultado" id="solucion">
+
+
+<select id="ingresaType">
+<option value="pascal">pascal</option>
+<option value="atmosfera">atmosfera</option>
+<option value="libra x pulgada cuadrada">libra x pulgada cuadrada</option>
+<option value="bar">bar</option>
+<option value="torr">torr</option>
+
+</select>
+
+
+
+<select id="solucionType">
+<option value="pascal">pascal</option>
+<option value="atmosfera">atmosfera</option>
+<option value="libra x pulgada cuadrada">libra x pulgada cuadrada</option>
+<option value="bar">bar</option>
+<option value="torr">torr</option>
+
+
+</select>
+
+</div>
+<script type="text/javascript">
+   var ingresa=document.getElementById('ingresa');
+   var solucion=document.getElementById('solucion');
+   var ingresaType=document.getElementById('ingresaType');
+   var solucionType=document.getElementById('solucionType');
+   var ingresaTypeValue,solucionTypeValue;
+
+//now add listener
+   ingresa.addEventListener("keyup",miSolucion);
+   ingresaType.addEventListener("change",miSolucion);
+   solucionType.addEventListener("change",miSolucion);
+
+// taking initial value
+   ingresaTypeValue=ingresaType.value;
+   solucionTypeValue=solucionType.value;
+   function miSolucion(){
+
+   ingresaTypeValue=ingresaType.value;
+   solucionTypeValue=solucionType.value;
+
+//now compare the input and resaultType value and add formula
+   if(ingresaTypeValue === "pascal" && solucionTypeValue==="atmosfera"){
+      solucion.value=Number(ingresa.value) * 9.8692e-6;
+   }else if(ingresaTypeValue === "pascal" && solucionTypeValue==="bar"){
+      solucion.value=Number(ingresa.value) * 1e-5;
+   }else if(ingresaTypeValue === "pascal" && solucionTypeValue==="libra x pulgada cuadrada"){
+      solucion.value=Number(ingresa.value) * 0.000145038 ;
+   }else if(ingresaTypeValue === "pascal" && solucionTypeValue==="torr"){
+      solucion.value=Number(ingresa.value) * 0.00750062;
+   }else if(ingresaTypeValue === "pascal" && solucionTypeValue==="pascal"){
+      solucion.value = ingresa.value
+   }
+
+
+   if(ingresaTypeValue === "atmosfera" && solucionTypeValue==="pascal"){
+      solucion.value=Number(ingresa.value) * 101325;
+   }else if(ingresaTypeValue === "atmosfera" && solucionTypeValue==="bar"){
+      solucion.value=Number(ingresa.value) * 1.01325;
+   }else if(ingresaTypeValue === "atmosfera" && solucionTypeValue==="libra x pulgada cuadrada"){
+      solucion.value=Number(ingresa.value) * 14.6959 ;
+   }else if(ingresaTypeValue === "atmosfera" && solucionTypeValue==="torr"){
+      solucion.value=Number(ingresa.value) * 760;
+   }else if(ingresaTypeValue === "atmosfera" && solucionTypeValue==="atmosfera"){
+      solucion.value = ingresa.value
+   }
+
+  if(ingresaTypeValue === "bar" && solucionTypeValue==="atmosfera"){
+      solucion.value=Number(ingresa.value) * 0.986923;
+   }else if(ingresaTypeValue === "bar" && solucionTypeValue==="pascal"){
+      solucion.value=Number(ingresa.value) * 100000;
+   }else if(ingresaTypeValue === "bar" && solucionTypeValue==="libra x pulgada cuadrada"){
+      solucion.value=Number(ingresa.value) * 14.5038 ;
+   }else if(ingresaTypeValue === "bar" && solucionTypeValue==="torr"){
+      solucion.value=Number(ingresa.value) * 750.062;
+   }else if(ingresaTypeValue === "bar" && solucionTypeValue==="bar"){
+      solucion.value = ingresa.value
+   }
+
+  if(ingresaTypeValue === "libra x pulgada cuadrada" && solucionTypeValue==="atmosfera"){
+      solucion.value=Number(ingresa.value) * 0.068046;
+   }else if(ingresaTypeValue === "libra x pulgada cuadrada" && solucionTypeValue==="bar"){
+      solucion.value=Number(ingresa.value) * 0.0689476;
+   }else if(ingresaTypeValue === "libra x pulgada cuadrada" && solucionTypeValue==="pascal"){
+      solucion.value=Number(ingresa.value) * 6894.76 ;
+   }else if(ingresaTypeValue === "libra x pulgada cuadrada" && solucionTypeValue==="torr"){
+      solucion.value=Number(ingresa.value) * 51.7149;
+   }else if(ingresaTypeValue === "libra x pulgada cuadrada" && solucionTypeValue==="libra x pulgada cuadrada"){
+      solucion.value = ingresa.value
+   }
+  if(ingresaTypeValue === "torr" && solucionTypeValue==="atmosfera"){
+      solucion.value=Number(ingresa.value) * 0.00131579;
+   }else if(ingresaTypeValue === "torr" && solucionTypeValue==="bar"){
+      solucion.value=Number(ingresa.value) * 0.00133322;
+   }else if(ingresaTypeValue === "torr" && solucionTypeValue==="pascal"){
+      solucion.value=Number(ingresa.value) * 133.322 ;
+   }else if(ingresaTypeValue === "torr" && solucionTypeValue==="libra x pulgada cuadrada"){
+      solucion.value=Number(ingresa.value) * 0.0193368;
+   }else if(ingresaTypeValue === "torr" && solucionTypeValue==="torr"){
+      solucion.value = ingresa.value
+   }
+    
+
+
+}
+</script>
+</center>
+</body>
+<br><br><br>
+</html>
